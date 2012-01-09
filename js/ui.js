@@ -3,18 +3,26 @@ function($, _, Backbone) {
 	var ui = {
 
 		initialize: function() {
-			ui.setup_selector();
+			ui.init_selector();
 		},
 
-		selector: $('#selector'),
-		setup_selector: function() {
-			$('<div id="selectorToggle" />').appendTo(ui.selector);
-		
-			ui.selector.data('state', 'open').click(function(e) {
-				if(ui.selector.data('state') == 'open') {
-					return ui.selector.animate({width: '3.5em'}).data('state', 'closed');
+		selector: {
+			obj:     $('#selector'),
+			is_open: true,
+			width: {
+				open: '20%',
+				closed: '3.5em'
+			}
+		},
+		init_selector: function() {
+			ui.selector.obj.append('<div id="selectorToggle"></div>')
+			.click(function(e) {
+				if(ui.selector.is_open) {
+					ui.selector.is_open = false;
+					return ui.selector.obj.animate({width: ui.selector.width.closed});
 				}
-				return ui.selector.animate({width: '20%'}).data('state', 'open');
+				ui.selector.is_open = true;
+				return ui.selector.obj.animate({width: ui.selector.width.open});
 			});
 		}
 	}
