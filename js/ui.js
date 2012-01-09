@@ -43,7 +43,7 @@ function($, _, Backbone) {
 				}
 				ui.toolbar.is_open = true;
 				return ui.toolbar.obj.animate({height: ui.toolbar.height.open});
-			}
+			});
 		}
 	}
 	return ui;
