@@ -4,6 +4,7 @@ function($, _, Backbone) {
 
 		initialize: function() {
 			ui.init_selector();
+			ui.init_toolbar();
 		},
 
 		selector: {
@@ -24,6 +25,25 @@ function($, _, Backbone) {
 				ui.selector.is_open = true;
 				return ui.selector.obj.animate({width: ui.selector.width.open});
 			});
+		},
+		toolbar: {
+			obj: $('#toolbar'),
+			is_open: false,
+			height: {
+				open: '30%',
+				closed: '3.5em'
+			}
+		},
+		init_toolbar: function() {
+			ui.toolbar.obj.prepend('<div id="toolbarToggle"></div>')
+			.click(function(e) {
+				if(ui.toolbar.is_open) {
+					ui.toolbar.is_open = false;
+					return ui.toolbar.obj.animate({height: ui.toolbar.height.closed});
+				}
+				ui.toolbar.is_open = true;
+				return ui.toolbar.obj.animate({height: ui.toolbar.height.open});
+			}
 		}
 	}
 	return ui;
