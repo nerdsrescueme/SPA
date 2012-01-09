@@ -244,7 +244,7 @@ html, body
 
 #selector
 {
-	background: #000;
+	background: #333;
 	height: 95%;
 	left: 0;
 	position: absolute;
@@ -255,12 +255,16 @@ html, body
 
 #selectorToggle
 {
-	position: absolute;
-	right: 0;
+	position: relative;
+	left: 100%;
+	top: 50%;
 	width: 1em;
-	height: 95%;
-	background: rgba(255,255,255, 0.5);
+	height: 6em;
+	margin: -3em 0 0 -1em;
+	background: rgba(255,255,255,0.3);
 	cursor: w-resize;
+	border-radius: 0.5em 0 0 0.5em;
+	border-right: 1px solid #ccc;
 }
 
 #page
@@ -273,14 +277,38 @@ html, body
 	z-index: 1;
 }
 
-#app > footer
+#toolbar
 {
 	position: absolute;
 	bottom: 0;
 	height: 3.5em;
 	width: 100%;
-	background: #000;
+	background: #333;
 	z-index: 3;
+}
+
+#toolbar div.bar
+{
+	height: 2.5em;
+}
+
+#toolbar div.area
+{
+	height: 100%;
+	background: #111;
+}
+
+#toolbarToggle
+{
+	position: relative;
+	left: 50%;
+	height: 1em;
+	width: 6em;
+	margin: 0 0 0 -3em;
+	background: rgba(255,255,255,0.3);
+	cursor: n-resize;
+	border-radius: 0 0 0.5em 0.5em;
+	border-top: 1px solid #ccc;
 }
 
 /* =============================================================================

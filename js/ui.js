@@ -32,10 +32,13 @@ function($, _, Backbone) {
 			height: {
 				open: '30%',
 				closed: '3.5em'
-			}
+			},
+			toggle: null
 		},
 		init_toolbar: function() {
-			ui.toolbar.obj.prepend('<div id="toolbarToggle"></div>')
+			ui.toolbar.obj.prepend('<div id="toolbarToggle"></div>');
+			
+			ui.toolbar.toggle = $('#toolbarToggle')
 			.click(function(e) {
 				if(ui.toolbar.is_open) {
 					ui.toolbar.is_open = false;
