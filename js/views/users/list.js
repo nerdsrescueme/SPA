@@ -1,19 +1,20 @@
-// Filename: views/projects/list
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'text!templates/users/list.html'
-], function($, _, Backbone, userListTemplate){
-  var userListView = Backbone.View.extend({
-    el: $("#page"),
-    initialize: function(){
-    },
-    render: function(){
-      var data = {};
-      var compiledTemplate = _.template( userListTemplate, data );
-      this.el.html( compiledTemplate );
-    }
-  });
-  return new userListView;
+	'jquery',
+	'underscore',
+	'backbone',
+	'text!templates/users/list.html'
+],
+function($, _, Backbone, UserListTpl){
+
+	var UserListView = Backbone.View.extend({
+		el: $('#page'),
+		initialize: function() {},
+		render: function() {
+			var data        = {};
+			var compiledTpl = _.template(UserListTpl, data);
+			this.el.html(compiledTpl);
+		}
+	});
+	return new UserListView;
+
 });
