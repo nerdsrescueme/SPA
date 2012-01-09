@@ -1,16 +1,14 @@
 define([
-  'jquery',
-  'underscore',
-  'backbone',
-  'models/pages'
-], function($, _, Backbone, pageModel){
-  var pagesCollection = Backbone.Collection.extend({
-    model: pageModel,
-    initialize: function(){
+	'jquery', 
+	'underscore', 
+	'backbone', 
+	'models/pages',
+],
+function($, _, Backbone, Page){
 
-    }
+	var Pages = Backbone.Collection.extend({
+		model: Page,
+	});
 
-  });
-
-  return new pagesCollection;
+	return new Pages;
 });
