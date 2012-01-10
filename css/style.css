@@ -207,7 +207,8 @@ html, body
 	overflow: hidden;
 }
 
-#app {
+#app
+{
 	height: 100%;
 }
 
@@ -220,6 +221,11 @@ html, body
 	height: 3.5em;
 	color: #fff;
 	text-align: right;
+	z-index: 5;
+	
+	-moz-box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
+	box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
 }
 
 #app > nav ul
@@ -273,7 +279,7 @@ html, body
 	top: 3.5em;
 	width: 100%;
 	height: 100%;
-	background: #ccc;
+	background: rgb(125,125,125);
 	z-index: 1;
 }
 
@@ -281,16 +287,23 @@ html, body
 {
 	position: absolute;
 	bottom: 0;
-	height: 3.5em;
+	height: 1.4em;
 	width: 100%;
 	background: rgb(50,50,50);
 	z-index: 3;
 	overflow: hidden;
+	color: #fff;
+	
+	-moz-box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
+	box-shadow: 0 0 6px 3px rgba(0,0,0,0.4);
 }
 
 #toolbar div.bar
 {
 	height: 3.5em;
+	line-height: 2.8em;
+	padding: 0 2em;
 }
 
 #toolbar div.area

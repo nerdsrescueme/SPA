@@ -12,10 +12,11 @@ function($, _, Backbone) {
 			is_open: true,
 			width: {
 				open: '18em',
-				closed: '3.5em'
+				closed: null
 			}
 		},
 		init_selector: function() {
+			ui.selector.width.closed = ui.selector.obj.css('width');
 			ui.selector.obj.append('<div id="selectorToggle"></div>')
 			.click(function(e) {
 				if(ui.selector.is_open) {
@@ -36,6 +37,7 @@ function($, _, Backbone) {
 			toggle: null
 		},
 		init_toolbar: function() {
+			ui.toolbar.height.closed = ui.toolbar.obj.css('height');
 			ui.toolbar.obj.prepend('<div id="toolbarToggle"></div>');
 			
 			ui.toolbar.toggle = $('#toolbarToggle')
