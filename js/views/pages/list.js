@@ -8,7 +8,7 @@ define([
 function($, _, Backbone, Pages, PageListTpl) {
 
 	var PageListView = Backbone.View.extend({
-		el: $('#page'),
+		el: $('#stage'),
 		initialize: function() {
 			this.collection = Pages;
 			this.collection.bind("add", this.exampleBind);

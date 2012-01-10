@@ -7,7 +7,7 @@ define([
 function($, _, Backbone, UserListTpl){
 
 	var UserListView = Backbone.View.extend({
-		el: $('#page'),
+		el: $('#stage'),
 		initialize: function() {},
 		render: function() {
 			var data        = {};

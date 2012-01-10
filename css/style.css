@@ -216,7 +216,7 @@ html, body
 	position: absolute;
 	top: 0;
 	width: 100%;
-	background: #000;
+	background: rgb(50,50,50);
 	height: 3.5em;
 	color: #fff;
 	text-align: right;
@@ -244,7 +244,7 @@ html, body
 
 #selector
 {
-	background: #333;
+	background: rgb(20,20,20);
 	height: 95%;
 	left: 0;
 	position: absolute;
@@ -267,7 +267,7 @@ html, body
 	border-right: 1px solid #ccc;
 }
 
-#page
+#stage
 {
 	position: absolute;
 	top: 3.5em;
@@ -283,19 +283,20 @@ html, body
 	bottom: 0;
 	height: 3.5em;
 	width: 100%;
-	background: #333;
+	background: rgb(50,50,50);
 	z-index: 3;
+	overflow: hidden;
 }
 
 #toolbar div.bar
 {
-	height: 2.5em;
+	height: 3.5em;
 }
 
 #toolbar div.area
 {
 	height: 100%;
-	background: #111;
+	background: rgb(10,10,10);
 }
 
 #toolbarToggle
@@ -305,7 +306,7 @@ html, body
 	height: 1em;
 	width: 6em;
 	margin: 0 0 0 -3em;
-	background: rgba(255,255,255,0.3);
+	background: rgb(130,130,130);
 	cursor: n-resize;
 	border-radius: 0 0 0.5em 0.5em;
 	border-top: 1px solid #ccc;

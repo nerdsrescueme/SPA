@@ -11,7 +11,7 @@ function($, _, Backbone) {
 			obj:     $('#selector'),
 			is_open: true,
 			width: {
-				open: '20%',
+				open: '18em',
 				closed: '3.5em'
 			}
 		},
@@ -30,7 +30,7 @@ function($, _, Backbone) {
 			obj: $('#toolbar'),
 			is_open: false,
 			height: {
-				open: '30%',
+				open: '18em',
 				closed: '3.5em'
 			},
 			toggle: null
